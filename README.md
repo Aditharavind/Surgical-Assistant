@@ -1,106 +1,26 @@
-Here’s a **README.md** file for your GitHub repository, explaining the **Chest Disease Detection** project, model details, and dataset requirements.  
+# AI Doctor Assistant for Chest,lung,Brain Disease Detection
 
----
+An AI-powered Doctor Assistant that aids in diagnosing chest conditions (Normal vs. Pneumonia) from X-ray images and provides actionable clinical recommendations. In future implementations, the system will be enhanced with a Large Language Model (LLM) integration to deliver more interactive and detailed diagnostic support.
 
-### 🏥 **Chest Disease Detection using CNN**
-**An AI-powered model for detecting Normal and Pneumonia conditions from chest X-rays.**  
+## Overview
 
----
+This project uses a Convolutional Neural Network (CNN) built with PyTorch to classify chest X-rays into **Normal** and **Pneumonia**. A user-friendly Streamlit interface is provided for testing the model and receiving step-by-step medical guidance. The dataset used in this project must be downloaded from Kaggle.
 
-## 🚀 **Project Overview**
-This project aims to classify chest X-rays into **Normal** and **Pneumonia** using a **Convolutional Neural Network (CNN)**.  
-The model is trained using the **Chest X-ray Dataset** available on Kaggle.  
+**Future Work:**  
+- **LLM Integration:** Future versions will integrate a Large Language Model (LLM) to generate comprehensive clinical recommendations and natural language explanations to further support doctors in their decision-making.
+- **Additional Diagnostic Modules:** Plans to expand the system to include brain tumor detection and lung cancer analysis.
 
----
+## Features
 
-## 📌 **Features**
-✅ Detects **Normal vs. Pneumonia** in chest X-rays.  
-✅ Built using **PyTorch & Torchvision**.  
-✅ Supports **GPU acceleration (CUDA)** for faster training.  
-✅ Implements **early stopping** to prevent overfitting.  
-✅ Includes **Streamlit UI** for easy model testing.  
+- **Chest X-ray Classification:** Automatically classifies X-rays into Normal or Pneumonia.
+- **Step-by-Step Clinical Guidance:** Provides a detailed step-by-step guide for the next medical actions, including recommended equipment.
+- **Streamlit Interface:** Easy-to-use web interface for doctors to upload images and view predictions.
+- **Future LLM Integration:** Plans to incorporate an LLM to provide enhanced clinical explanations and interactive support.
 
----
+## Dataset
 
-## 📂 **Dataset**
-The dataset must be downloaded manually from Kaggle:  
+The chest X-ray dataset can be downloaded from Kaggle:  
+[Chest X-ray Dataset (Kaggle)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
-🔗 **[Chest X-ray Dataset (Kaggle)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)**  
+After downloading, organize the dataset with the following directory structure:
 
-After downloading, place the dataset in the following directory structure:  
-
-```
-D:\Surgical AI assitant\brain\Chest\
-│── train\
-│   ├── Normal\
-│   ├── Pneumonia\
-│── val\
-│   ├── Normal\
-│   ├── Pneumonia\
-│── test\
-│   ├── Normal\
-│   ├── Pneumonia\
-```
-
----
-
-## 🏗 **Installation & Setup**
-1️⃣ Clone the repository  
-```bash
-git clone https://github.com/yourusername/chest-disease-detection.git
-cd chest-disease-detection
-```
-2️⃣ Install dependencies  
-```bash
-pip install torch torchvision streamlit tqdm matplotlib
-```
-3️⃣ Train the model  
-```bash
-python train_chest_cnn.py
-```
-4️⃣ Run the Streamlit UI  
-```bash
-streamlit run app.py
-```
-
----
-
-## ⚙ **Model Training**
-The CNN model is trained with:  
-📌 **Data Augmentation** (Random crop, horizontal flip)  
-📌 **CrossEntropy Loss**  
-📌 **Adam Optimizer** (`lr=0.001`)  
-📌 **50 Epochs with Early Stopping**  
-
----
-
-## 📊 **Results**
-✅ **Training Accuracy:** **79**  
-✅ **Validation Accuracy:** **79**  
-✅ **Test Accuracy:** **78**  
-
-> *(Replace "XX" with actual results after training.)*  
-
----
-
-## 🎯 **Future Improvements**
-🔹 Improve accuracy with **Transfer Learning (ResNet, VGG16, EfficientNet)**  
-🔹 Optimize for **mobile & edge devices**  
-🔹 Add **explainability (Grad-CAM) for better model insights**  
-
----
-
-## 🤝 **Contributing**
-1. Fork the repo  
-2. Create a new branch (`feature-name`)  
-3. Commit changes & push  
-4. Open a Pull Request  
-
----
-
-## 📜 **License**
-This project is **open-source** under the **MIT License**.  
-
----
-
-Now, you can **copy-paste** this into your `README.md` and upload it to your **GitHub repository**! 🎯🚀
